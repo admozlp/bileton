@@ -1,0 +1,5 @@
+rootProject.name = 'bileton'
+include 'payment-service'
+include 'trip-service'
+include 'ticket-service'
+
