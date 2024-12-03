@@ -2,6 +2,7 @@ ext {
     versions = [
             springBoot: "3.4.0",
             lombok    : "1.18.36",
+            swagger   : "2.7.0"
 
     ]
 
@@ -9,6 +10,7 @@ ext {
             springBootWeb        : "org.springframework.boot:spring-boot-starter-web:$versions.springBoot",
             springBootValidation : "org.springframework.boot:spring-boot-starter-validation:$versions.springBoot",
             springBootStarterTest: "org.springframework.boot:spring-boot-starter-test:$versions.springBoot",
+            swagger              : "org.springdoc:springdoc-openapi-starter-webmvc-ui:$versions.swagger",
             lombok               : "org.projectlombok:lombok:$versions.lombok",
             junitPlatformLauncher: "org.junit.platform:junit-platform-launcher:1.11.3",
     ]
