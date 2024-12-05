@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: bileton-apigw
+
+
+eureka:
+  client:
+    availability-zones:
+        defaultZone: default
+    enabled: true

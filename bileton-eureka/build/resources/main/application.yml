@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: bileton-eureka
+
+server:
+  port: 9201
