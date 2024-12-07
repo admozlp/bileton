@@ -1,5 +1,17 @@
 spring:
   application:
-    name: payment-service
+    name: bileton-payment
+  profiles:
+    active: dev
+
 server:
   port: 0
+
+### Eureka Configuration ###
+eureka:
+  instance:
+    preferIpAddress: true
+    instanceId: ${spring.application.name}:${random.value}
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka/}

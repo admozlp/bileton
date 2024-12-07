@@ -1,10 +1,25 @@
 spring:
   application:
-    name: bileton-apigw
+    name: apigw
+  profiles:
+    active: dev
+  main:
+    web-application-type: reactive
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
 
+server:
+  port: 9100
 
+### Eureka Configuration ###
 eureka:
+  instance:
+    preferIpAddress: true
+    instanceId: ${spring.application.name}:${random.value}
   client:
-    availability-zones:
-        defaultZone: default
-    enabled: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka/}

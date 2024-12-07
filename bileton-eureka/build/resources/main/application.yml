@@ -3,4 +3,9 @@ spring:
     name: bileton-eureka
 
 server:
-  port: 9201
+  port: 8761
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false

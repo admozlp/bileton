@@ -45,10 +45,18 @@ allprojects {
             mavenCentral()
         }
     }
+
+    dependencyManagement {
+        imports {
+            mavenBom "org.springframework.cloud:spring-cloud-dependencies:${versions.springCloudVersion}"
+        }
+    }
+
     dependencies {
         implementation libs.springBootWeb
         implementation libs.springBootValidation
         implementation libs.swagger
+        implementation libs.springCloud
         compileOnly libs.lombok
         annotationProcessor libs.lombok
         testImplementation libs.springBootStarterTest
@@ -56,6 +64,10 @@ allprojects {
     }
 }
 apply from: 'dependencies.gradle'
+
+ext {
+    springCloudVersion = "2024.0.0"
+}
 
 configurations {
     compileOnly {

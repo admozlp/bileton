@@ -13,5 +13,6 @@ ext {
             swagger              : "org.springdoc:springdoc-openapi-starter-webmvc-ui:$versions.swagger",
             lombok               : "org.projectlombok:lombok:$versions.lombok",
             junitPlatformLauncher: "org.junit.platform:junit-platform-launcher:1.11.3",
+            springCloud : "org.springframework.cloud:spring-cloud-starter-netflix-eureka-client"
     ]
 }
