@@ -12,6 +12,8 @@ ext {
             springBootStarterTest: "org.springframework.boot:spring-boot-starter-test:$versions.springBoot",
             swagger              : "org.springdoc:springdoc-openapi-starter-webmvc-ui:$versions.swagger",
             lombok               : "org.projectlombok:lombok:$versions.lombok",
+            kotlin               : "org.jetbrains.kotlin:kotlin-stdlib-jdk8",
+            actuator             : "org.springframework.boot:spring-boot-starter-actuator",
             junitPlatformLauncher: "org.junit.platform:junit-platform-launcher:1.11.3",
             springCloud : "org.springframework.cloud:spring-cloud-starter-netflix-eureka-client"
     ]

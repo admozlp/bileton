@@ -1,0 +1,9 @@
+group = 'com.ademozalp.bileton'
+version = '1.0.0'
+jar {
+    archiveBaseName.set('bileton-common')
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+}

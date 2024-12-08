@@ -4,11 +4,13 @@ plugins {
     id 'io.spring.dependency-management' version '1.1.6'
     id 'application'
     id 'java-library'
+    id 'org.jetbrains.kotlin.jvm'
 }
 
 allprojects {
     apply from: "${rootDir}/dependencies.gradle"
     apply plugin: 'application'
+    apply plugin: 'org.jetbrains.kotlin.jvm'
     group = 'com.ademozalp.bileton'
     version = '1.0.0'
     sourceCompatibility = JavaVersion.VERSION_21
@@ -40,34 +42,34 @@ allprojects {
         google()
         mavenCentral()
     }
+    kotlin {
+        jvmToolchain(21)
+    }
     buildscript {
         repositories {
             mavenCentral()
         }
     }
-
     dependencyManagement {
         imports {
             mavenBom "org.springframework.cloud:spring-cloud-dependencies:${versions.springCloudVersion}"
         }
     }
-
     dependencies {
         implementation libs.springBootWeb
         implementation libs.springBootValidation
         implementation libs.swagger
         implementation libs.springCloud
+        implementation libs.actuator
         compileOnly libs.lombok
         annotationProcessor libs.lombok
+        implementation libs.kotlin
+
         testImplementation libs.springBootStarterTest
         testRuntimeOnly libs.junitPlatformLauncher
     }
 }
 apply from: 'dependencies.gradle'
-
-ext {
-    springCloudVersion = "2024.0.0"
-}
 
 configurations {
     compileOnly {
