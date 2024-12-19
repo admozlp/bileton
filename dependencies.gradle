@@ -4,6 +4,8 @@ ext {
             lombok    : "1.18.36",
             swagger   : "2.7.0",
             springCloudVersion: "2024.0.0",
+            swaggerWebflux: "1.8.0",
+            "junitPlatformLauncher": "1.11.3"
     ]
 
     libs = [
@@ -14,7 +16,7 @@ ext {
             lombok               : "org.projectlombok:lombok:$versions.lombok",
             kotlin               : "org.jetbrains.kotlin:kotlin-stdlib-jdk8",
             actuator             : "org.springframework.boot:spring-boot-starter-actuator",
-            junitPlatformLauncher: "org.junit.platform:junit-platform-launcher:1.11.3",
+            junitPlatformLauncher: "org.junit.platform:junit-platform-launcher:$versions.junitPlatformLauncher",
             springCloud : "org.springframework.cloud:spring-cloud-starter-netflix-eureka-client"
     ]
 }

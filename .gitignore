@@ -101,3 +101,4 @@ out/
 !**/src/test/**/out/
 # Project exclude paths
 /payment-service/build/
+**/build/

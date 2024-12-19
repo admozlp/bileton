@@ -4,14 +4,15 @@ import jakarta.persistence.*
 import org.springframework.data.annotation.CreatedDate
 import org.springframework.data.annotation.LastModifiedDate
 import java.time.LocalDateTime
+import java.util.*
 
 @MappedSuperclass
 abstract class BaseEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false, updatable = false)
-    open var id: Long = 0
+    open var id: UUID = UUID.randomUUID()
         protected set
 
     @CreatedDate
