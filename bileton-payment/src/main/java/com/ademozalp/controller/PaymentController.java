@@ -19,7 +19,7 @@ public class PaymentController {
     public String health(HttpServletRequest request) {
         String ipAddress = request.getRemoteAddr();
         ipList.add(ipAddress);
-        return "jagged samo. sikise devam";
+        return "OK";
     }
 
     @GetMapping("/ip")
