@@ -1,6 +1,6 @@
 spring:
   application:
-    name: apigw
+    name: bileton-apigw
   profiles:
     active: dev
   main:
@@ -23,6 +23,7 @@ eureka:
   client:
     serviceUrl:
       defaultZone: ${EUREKA_URI:http://localhost:8761/eureka/}
+    registry-fetch-interval-seconds: 5
 
 springdoc:
   api-docs:

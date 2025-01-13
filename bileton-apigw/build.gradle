@@ -1,4 +1,5 @@
 dependencies {
     implementation libs.apiGateway
     implementation libs.swaggerWebflux
+    implementation libs.eurekaClient
 }

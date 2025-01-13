@@ -1,0 +1,12 @@
+### Vault Config ###
+spring:
+  config:
+    import: optional:vault://
+  cloud:
+    vault:
+      enabled: true
+      uri: ${VAULT_URL}
+      authentication: token
+      token: ${VAULT_TOKEN}
+      kv:
+        enabled: true

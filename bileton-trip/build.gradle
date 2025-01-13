@@ -1,6 +1,7 @@
 dependencies {
     implementation project(':bileton-common')
     implementation libs.jpa
+    implementation libs.eurekaClient
     implementation libs.vaultConfig
     runtimeOnly libs.postgresql
     implementation libs.jacksonKotlin

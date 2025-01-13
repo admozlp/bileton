@@ -1,6 +1,7 @@
 package com.ademozalp.bileton.model
 
-import com.ademozalp.bileton.util.DatabaseConstant
+import com.ademozalp.bileton.model.base.BaseEntity
+import com.ademozalp.bileton.util.DBConstant
 import com.ademozalp.bu_bilet.model.enums.GenderType
 import com.ademozalp.bu_bilet.model.enums.TicketStatusType
 import jakarta.persistence.*
@@ -9,7 +10,7 @@ import java.math.BigDecimal
 
 
 @Entity
-@Table(name = DatabaseConstant.TICKET)
+@Table(name = DBConstant.TICKET)
 @EntityListeners(AuditingEntityListener::class)
 data class Ticket @JvmOverloads constructor(
     @Column(nullable = false, unique = true)

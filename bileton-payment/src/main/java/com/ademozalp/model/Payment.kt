@@ -1,7 +1,7 @@
 package com.ademozalp.model
 
-import com.ademozalp.bileton.model.BaseEntity
 import com.ademozalp.bu_bilet.model.enums.PaymentStatusType
+import com.ademozalp.model.base.BaseEntity
 import jakarta.persistence.Column
 import java.math.BigDecimal
 import java.time.LocalDate

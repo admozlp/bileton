@@ -1,27 +1,4 @@
-server:
-  port: 0
-
+### Root Config ###
 spring:
   application:
     name: bileton-trip
-  profiles:
-    active: dev
-  config:
-    import: optional:vault://
-  cloud:
-    vault:
-      enabled: true
-      uri: ${VAULT_URL}
-      authentication: token
-      token: ${VAULT_TOKEN}
-      kv:
-        enabled: true
-
-### Eureka Configuration ###
-eureka:
-  instance:
-    preferIpAddress: true
-    instanceId: ${spring.application.name}:${random.value}
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka/}
