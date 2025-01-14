@@ -4,6 +4,4 @@ dependencies {
     implementation libs.eurekaClient
     implementation libs.vaultConfig
     runtimeOnly libs.postgresql
-    implementation libs.jacksonKotlin
-    runtimeOnly libs.kotlinReflect
 }

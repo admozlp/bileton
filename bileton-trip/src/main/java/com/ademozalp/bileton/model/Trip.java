@@ -1,8 +1,8 @@
 package com.ademozalp.bileton.model;
 
+import com.ademozalp.bileton.enums.TripStatus;
 import com.ademozalp.bileton.model.base.BaseEntity;
 import com.ademozalp.bileton.util.DBConstant;
-import com.ademozalp.bu_bilet.model.enums.TripStatus;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.Formula;

@@ -100,5 +100,9 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 # Project exclude paths
-/payment-service/build/
+/bileton-trip/build/
+/bileton-common/build/
+/bileton-apigw/build/
+/bileton-payment/build/
+/bileton-ticket/build/
 **/build/

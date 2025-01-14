@@ -1,14 +1,13 @@
 package com.ademozalp.bileton.controller;
 
+import com.ademozalp.bileton.dto.base.APIResponse;
+import com.ademozalp.bileton.dto.enums.ResponseMessage;
 import com.ademozalp.bileton.dto.location.CreateLocationRequest;
+import com.ademozalp.bileton.dto.location.LocationSearchResponse;
 import com.ademozalp.bileton.service.LocationService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,9 +18,20 @@ public class LocationController {
     private final LocationService service;
 
     @PostMapping("/import")
-    public ResponseEntity<Void> importLocations(@RequestBody @Valid List<CreateLocationRequest> locationRequests) {
+    public APIResponse<Void> importLocations(@RequestBody @Valid List<CreateLocationRequest> locationRequests) {
         service.importLocations(locationRequests);
-        return ResponseEntity.ok().build();
+        return APIResponse.<Void>builder()
+                .code(ResponseMessage.IMPORTED.code())
+                .message(ResponseMessage.IMPORTED.message())
+                .build();
     }
 
+    @GetMapping("/search")
+    public APIResponse<List<LocationSearchResponse>> searchLocations(@RequestParam String name) {
+        return APIResponse.<List<LocationSearchResponse>>builder()
+                .code(ResponseMessage.LISTED.code())
+                .message(ResponseMessage.LISTED.message())
+                .data(service.searchLocations(name))
+                .build();
+    }
 }

@@ -13,9 +13,9 @@ ext {
             springBootValidation : "org.springframework.boot:spring-boot-starter-validation:$versions.springBoot",
             jpa                  : "org.springframework.boot:spring-boot-starter-data-jpa:$versions.springBoot",
             postgresql           : "org.postgresql:postgresql",
+            elasticsearch        : "org.springframework.boot:spring-boot-starter-data-elasticsearch",
             swagger              : "org.springdoc:springdoc-openapi-starter-webmvc-ui:$versions.swagger",
             lombok               : "org.projectlombok:lombok:$versions.lombok",
-            kotlin               : "org.jetbrains.kotlin:kotlin-stdlib-jdk8",
             actuator             : "org.springframework.boot:spring-boot-starter-actuator",
             swaggerWebflux       : "org.springdoc:springdoc-openapi-webflux-ui:$versions.swaggerWebflux",
             apiGateway           : "org.springframework.cloud:spring-cloud-starter-gateway",
@@ -25,7 +25,5 @@ ext {
             vaultConfig          : "org.springframework.cloud:spring-cloud-starter-vault-config",
             junitPlatformLauncher: "org.junit.platform:junit-platform-launcher:$versions.junitPlatformLauncher",
             springBootStarterTest: "org.springframework.boot:spring-boot-starter-test:$versions.springBoot",
-            jacksonKotlin        : "com.fasterxml.jackson.module:jackson-module-kotlin",
-            kotlinReflect        : "org.jetbrains.kotlin:kotlin-reflect"
     ]
 }
